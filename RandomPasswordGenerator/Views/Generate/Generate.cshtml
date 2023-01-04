@@ -1,0 +1,28 @@
+﻿@model GeneratorModel
+@{
+    ViewData["Title"] = "Generate";
+}
+
+<h1>Generate</h1>
+
+<h4>Create youre password here</h4>
+<h5>How long would you like your password to be?</h5>
+<hr />
+<div>
+    <form method="post" action="Generatepassword">
+        <div class="mb-3">
+            <label for="Length" class="form-label">Password Length</label>
+            <input type="number" class="form-control" name="Length" placeholder="enter your password length">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+        </div>
+    </form>
+    <div class="text-center">
+        <h2>Your generated pasword is:</h2>
+        <h3>
+            @Model.Password
+        </h3>
+    </div>
+
+</div>
